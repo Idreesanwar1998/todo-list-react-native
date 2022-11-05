@@ -1,1 +1,1 @@
-# todo-list-react-native
+# A classic todo list app to test my react native skills
