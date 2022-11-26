@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
-import TodoListPage from './components/pages/TodoListPage';
+import TodoListPage from './components/pages/TodoLists';
 import lists from './services/Lists';
 
 export default function App() {
