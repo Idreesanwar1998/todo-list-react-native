@@ -11,20 +11,28 @@ function listItemDeleted(item) {
 }
 
 export default function ListItem({ item }) {
-    const [listItem, checkBoxPressed] = useState(item);
+    const [listItem, setListItem] = useState({
+        id: item.id,
+        name: item.name,
+        complete: item.complete,
+        tags: item.tags,
+    });
+
+    function updateItem(value) {
+        setListItem({ ...listItem, complete: value });
+    }
+
     return (
         <View>
-            <Pressable style={styles.listItem} onPress={() => listItemPressed(item)}>
+            <Pressable style={styles.listItem} onPress={() => listItemPressed(listItem)}>
                 <View style={styles.listItemContainer}>
                     <Checkbox
                         style={styles.itemCheckBox}
-                        value={item.complete}
-                        onValueChange={(value) => {
-                            item.complete = value;
-                        }}
+                        value={listItem.complete}
+                        onValueChange={updateItem}
                         color={undefined}
                     />
-                    <Text style={styles.listItemTitle}>{item.name}</Text>
+                    <Text style={styles.listItemTitle}>{listItem.name}</Text>
                 </View>
             </Pressable>
         </View>

@@ -14,7 +14,7 @@ export default function App() {
                 behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
                 style={styles.taskWriterContainer}
             >
-                <TextInput style={styles.taskInput} placeholder="Add a new task" />
+                <TextInput style={styles.taskInput} placeholder="Add a new list" />
                 <Pressable>
                     <Text>Add</Text>
                 </Pressable>
@@ -40,8 +40,7 @@ const styles = StyleSheet.create({
     },
     taskWriterContainer: {
         flexDirection: 'row',
-        marginTop: 20,
-        padding: 20,
+        padding: 10,
     },
-    taskInput: { flex: 4, padding: 20 },
+    taskInput: { flex: 4, padding: 10 },
 });
