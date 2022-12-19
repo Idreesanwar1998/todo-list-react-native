@@ -9,6 +9,7 @@ const lists = [
             { id: uuid.v4(), name: 'test' },
             { id: uuid.v4(), name: 'test' },
         ],
+        complete: false,
     },
     {
         id: uuid.v4(),
@@ -18,6 +19,7 @@ const lists = [
             { id: uuid.v4(), name: 'test' },
             { id: uuid.v4(), name: 'test' },
         ],
+        complete: false,
     },
     {
         id: uuid.v4(),
@@ -27,6 +29,7 @@ const lists = [
             { id: uuid.v4(), name: 'test' },
             { id: uuid.v4(), name: 'test' },
         ],
+        complete: true,
     },
     {
         id: uuid.v4(),
@@ -36,6 +39,7 @@ const lists = [
             { id: uuid.v4(), name: 'test' },
             { id: uuid.v4(), name: 'test' },
         ],
+        complete: true,
     },
     {
         id: uuid.v4(),
@@ -45,6 +49,47 @@ const lists = [
             { id: uuid.v4(), name: 'test' },
             { id: uuid.v4(), name: 'test' },
         ],
+        complete: true,
+    },
+    {
+        id: uuid.v4(),
+        name: 'list 6',
+        tags: [
+            { id: uuid.v4(), name: 'test' },
+            { id: uuid.v4(), name: 'test' },
+            { id: uuid.v4(), name: 'test' },
+        ],
+        complete: true,
+    },
+    {
+        id: uuid.v4(),
+        name: 'list 7',
+        tags: [
+            { id: uuid.v4(), name: 'test' },
+            { id: uuid.v4(), name: 'test' },
+            { id: uuid.v4(), name: 'test' },
+        ],
+        complete: true,
+    },
+    {
+        id: uuid.v4(),
+        name: 'list 8',
+        tags: [
+            { id: uuid.v4(), name: 'test' },
+            { id: uuid.v4(), name: 'test' },
+            { id: uuid.v4(), name: 'test' },
+        ],
+        complete: true,
+    },
+    {
+        id: uuid.v4(),
+        name: 'list 9 jsjsjsjsjsjsjsjjsjsjsjsjjsjsjsjjsjsjsjsjsjsjjsjsjsjsjjsjsjs',
+        tags: [
+            { id: uuid.v4(), name: 'test' },
+            { id: uuid.v4(), name: 'test' },
+            { id: uuid.v4(), name: 'test' },
+        ],
+        complete: true,
     },
 ];
 

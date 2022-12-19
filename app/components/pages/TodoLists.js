@@ -1,42 +1,10 @@
 import { StyleSheet, View, Pressable, Text, FlatList } from 'react-native';
-import Ionicons from '@expo/vector-icons/AntDesign';
-import uuid from 'react-native-uuid';
-
-function listItemPressed(item) {
-    alert(`${item.name} was pressed`);
-}
-
-function listItemDeleted(item) {
-    alert(`${item.name} was deleted`);
-}
+import ListItem from '../ListItem';
 
 export default function TodoListPage({ todoLists }) {
     return (
         <View style={styles.todoListContainer}>
-            <FlatList
-                data={todoLists}
-                renderItem={({ item }) => (
-                    <Pressable style={styles.todoListItem} onPress={() => listItemPressed(item)}>
-                        <View style={styles.listItemContainer}>
-                            <Text style={styles.listName}>{item.name}</Text>
-                            <Ionicons
-                                style={styles.iconStyle}
-                                name="delete"
-                                size={20}
-                                color="red"
-                                onPress={() => {
-                                    listItemDeleted(item);
-                                }}
-                            />
-                        </View>
-                        <FlatList
-                            horizontal={true}
-                            data={item.tags.slice(0, 3)}
-                            renderItem={({ item }) => <Text style={styles.tag}>{item.name}</Text>}
-                        />
-                    </Pressable>
-                )}
-            />
+            <FlatList data={todoLists} renderItem={({ item }) => <ListItem item={item}></ListItem>} />
         </View>
     );
 }
@@ -44,37 +12,23 @@ export default function TodoListPage({ todoLists }) {
 const styles = StyleSheet.create({
     todoListContainer: {
         flex: 1,
-    },
-    todoListItem: {
-        borderWidth: 1,
-        borderColor: '#000000',
-        marginLeft: 6,
-        marginRight: 6,
-        marginTop: 6,
-        padding: 10,
-        borderRadius: 10,
-    },
-    listItemContainer: {
-        flexDirection: 'row',
-    },
-    listName: {
-        flex: 5,
-        // borderColor: '#000000',
-        // borderWidth: 1,
+        backgroundColor: '#E8EAED',
     },
     iconStyle: {
         flex: 1,
-        // borderColor: '#000000',
-        // borderWidth: 1,
         textAlign: 'right',
     },
     tag: {
-        padding: 5,
-        margintop: 5,
-        marginBottom: 5,
+        padding: 10,
+        paddingEnd: 20,
+        paddingStart: 20,
+        marginBottom: 10,
         marginEnd: 5,
-        borderRadius: 50,
-        backgroundColor: '#2471A3',
-        color: '#fff',
+        borderRadius: 20,
+        backgroundColor: '#b1ecfc',
+    },
+
+    tagContent: {
+        color: '#1d48f2',
     },
 });
