@@ -15,8 +15,8 @@ export default function App() {
                 style={styles.taskWriterContainer}
             >
                 <TextInput style={styles.taskInput} placeholder="Add a new list" />
-                <Pressable>
-                    <Text>Add</Text>
+                <Pressable style={styles.taskInputButton}>
+                    <Text>+</Text>
                 </Pressable>
             </KeyboardAvoidingView>
         </SafeAreaView>
@@ -40,7 +40,29 @@ const styles = StyleSheet.create({
     },
     taskWriterContainer: {
         flexDirection: 'row',
-        padding: 10,
+        paddingStart: 15,
+        paddingEnd: 15,
     },
-    taskInput: { flex: 4, padding: 10 },
+    taskInput: {
+        flex: 4,
+        padding: 10,
+        marginTop: 10,
+        marginBottom: 10,
+        marginEnd: 5,
+        borderRadius: 10,
+        borderColor: 'black',
+        backgroundColor: 'white',
+        borderWidth: 1,
+    },
+    taskInputButton: {
+        marginTop: 10,
+        marginBottom: 10,
+        borderRadius: 10,
+        justifyContent: 'center',
+        alignItems: 'center',
+        flex: 1,
+        borderColor: 'black',
+        backgroundColor: 'white',
+        borderWidth: 1,
+    },
 });

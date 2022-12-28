@@ -1,4 +1,4 @@
-import { StyleSheet, View, Pressable, Text, FlatList } from 'react-native';
+import { StyleSheet, View, FlatList } from 'react-native';
 import ListItem from '../ListItem';
 
 export default function TodoListPage({ todoLists }) {
