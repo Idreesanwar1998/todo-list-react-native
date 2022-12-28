@@ -8,10 +8,10 @@ import {
     TextInput,
     Pressable,
 } from 'react-native';
-import ListItem from '../ListItem';
-import lists from '../../services/Lists';
+import ListItem from '../components/ListItem';
+import lists from '../services/Lists';
 
-export default function TodoListScreen() {
+export default function TodoListsScreen() {
     return (
         <SafeAreaView style={styles.todoListScreen}>
             <View style={styles.todoListContainer}>
