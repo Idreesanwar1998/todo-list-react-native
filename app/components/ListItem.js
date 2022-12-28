@@ -10,7 +10,7 @@ function listItemDeleted(item) {
     alert(`${item.name} was deleted`);
 }
 
-export default function ListItem({ item }) {
+export default function ListItem({ item, navigation }) {
     const [listItem, setListItem] = useState({
         id: item.id,
         name: item.name,
@@ -24,7 +24,7 @@ export default function ListItem({ item }) {
 
     return (
         <View>
-            <Pressable style={styles.listItem} onPress={() => listItemPressed(listItem)}>
+            <Pressable style={styles.listItem} onPress={() => navigation.navigate('test')}>
                 <View style={styles.listItemContainer}>
                     <Checkbox
                         style={styles.itemCheckBox}

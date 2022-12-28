@@ -10,13 +10,18 @@ import {
 } from 'react-native';
 import ListItem from '../components/ListItem';
 import lists from '../services/Lists';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-export default function TodoListsScreen() {
+export default function TodoListsScreen({ navigation }) {
     return (
         <SafeAreaView style={styles.todoListScreen}>
             <View style={styles.todoListContainer}>
                 <Text style={styles.SectionTitle}>Your Lists</Text>
-                <FlatList data={lists} renderItem={({ item }) => <ListItem item={item}></ListItem>} />
+                <FlatList
+                    data={lists}
+                    renderItem={({ item }) => <ListItem item={item} navigation={navigation}></ListItem>}
+                />
             </View>
             <KeyboardAvoidingView
                 behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
